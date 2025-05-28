@@ -1,0 +1,133 @@
+/* Navbar.css */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark-mode .navbar.scrolled {
+  background-color: rgba(33, 33, 33, 0.9) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.avatar-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-600);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.dark-mode .avatar-circle {
+  background-color: var(--primary-800);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.icon-sm {
+  vertical-align: -0.125em;
+}
+
+.dropdown-menu {
+  border-radius: 0.5rem;
+  border: none;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.2s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.dark-mode .dropdown-item:hover {
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-500);
+  border-radius: 3px;
+}
+
+.dark-mode .nav-link.active::after {
+  background-color: var(--primary-300);
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: inherit;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .dark-mode .navbar-collapse {
+    background-color: var(--neutral-800);
+  }
+  
+  .nav-link.active::after {
+    left: 0;
+    transform: none;
+    width: 3px;
+    height: 100%;
+    top: 0;
+  }
+}

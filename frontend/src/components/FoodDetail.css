@@ -1,0 +1,494 @@
+.food-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--primary-600);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--neutral-100);
+}
+
+.food-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.food-detail-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-detail-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1.5rem;
+}
+
+.food-detail-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.featured-badge, .veg-badge, .vegan-badge {
+  position: absolute;
+  top: 16px;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.featured-badge {
+  left: 16px;
+  background-color: var(--primary-600);
+  color: white;
+}
+
+.veg-badge {
+  right: 16px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.vegan-badge {
+  right: 16px;
+  background-color: #8BC34A;
+  color: white;
+}
+
+.food-detail-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  border: 1px solid var(--neutral-300);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-400);
+}
+
+.food-detail-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.food-name {
+  font-size: 2.2rem;
+  color: var(--neutral-800);
+  margin: 0 0 1rem 0;
+}
+
+.food-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prep-time, .rating, .calories {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--neutral-600);
+  font-size: 0.95rem;
+}
+
+.rating {
+  color: #FFB800;
+}
+
+.food-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--neutral-700);
+  margin-bottom: 2rem;
+}
+
+.food-ingredients {
+  margin-bottom: 2rem;
+}
+
+.food-ingredients h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-800);
+}
+
+.food-ingredients ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.8rem;
+  padding-left: 1.5rem;
+}
+
+.food-ingredients li {
+  color: var(--neutral-700);
+}
+
+.dietary-info {
+  margin-bottom: 2rem;
+}
+
+.dietary-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-800);
+}
+
+.dietary-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.dietary-tag {
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: var(--neutral-200);
+  color: var(--neutral-700);
+}
+
+.dietary-tag.vegetarian {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+.dietary-tag.vegan {
+  background-color: #F1F8E9;
+  color: #558B2F;
+}
+
+.dietary-tag.gluten-free {
+  background-color: #FFF8E1;
+  color: #FF8F00;
+}
+
+.dietary-tag.nut-free {
+  background-color: #E1F5FE;
+  color: #0277BD;
+}
+
+.order-section {
+  background-color: #F9FAFB;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: auto;
+}
+
+.price-section, .quantity-section {
+  margin-bottom: 1.5rem;
+}
+
+.price-section h3, .quantity-section h3 {
+  font-size: 1rem;
+  color: var(--neutral-600);
+  margin-bottom: 0.5rem;
+}
+
+.food-price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-700);
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-control button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid var(--neutral-300);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quantity-control button:hover:not(:disabled) {
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-400);
+}
+
+.quantity-control button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-control span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  min-width: 30px;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background-color: var(--primary-600);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: var(--primary-700);
+}
+
+.add-to-cart-btn:disabled {
+  background-color: var(--neutral-400);
+  cursor: not-allowed;
+}
+
+.related-foods-section {
+  margin-top: 4rem;
+}
+
+.related-foods-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--neutral-800);
+}
+
+.related-foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.related-food-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.related-food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.related-food-image {
+  height: 160px;
+  overflow: hidden;
+}
+
+.related-food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.related-food-card:hover .related-food-image img {
+  transform: scale(1.05);
+}
+
+.related-food-content {
+  padding: 1rem;
+}
+
+.related-food-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--neutral-800);
+}
+
+.related-food-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.related-food-price {
+  font-weight: 600;
+  color: var(--primary-700);
+}
+
+.related-food-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #FFB800;
+  font-size: 0.9rem;
+}
+
+.food-detail-loading, .food-detail-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-600);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.food-detail-error h2 {
+  color: #B91C1C;
+  margin-bottom: 1rem;
+}
+
+/* Dark mode styles */
+.dark-mode .back-btn {
+  color: var(--primary-400);
+}
+
+.dark-mode .back-btn:hover {
+  background-color: var(--neutral-800);
+}
+
+.dark-mode .action-btn {
+  background-color: var(--neutral-800);
+  border-color: var(--neutral-700);
+  color: var(--neutral-300);
+}
+
+.dark-mode .action-btn:hover {
+  background-color: var(--neutral-700);
+}
+
+.dark-mode .food-name {
+  color: var(--neutral-200);
+}
+
+.dark-mode .food-description {
+  color: var(--neutral-400);
+}
+
+.dark-mode .food-ingredients h3,
+.dark-mode .dietary-info h3 {
+  color: var(--neutral-300);
+}
+
+.dark-mode .food-ingredients li {
+  color: var(--neutral-400);
+}
+
+.dark-mode .order-section {
+  background-color: var(--neutral-800);
+}
+
+.dark-mode .food-price {
+  color: var(--primary-400);
+}
+
+.dark-mode .quantity-control button {
+  background-color: var(--neutral-700);
+  border-color: var(--neutral-600);
+  color: white;
+}
+
+.dark-mode .quantity-control button:hover:not(:disabled) {
+  background-color: var(--neutral-600);
+}
+
+.dark-mode .quantity-control span {
+  color: var(--neutral-300);
+}
+
+.dark-mode .related-foods-section h2 {
+  color: var(--neutral-300);
+}
+
+.dark-mode .related-food-card {
+  background-color: var(--neutral-800);
+}
+
+.dark-mode .related-food-content h3 {
+  color: var(--neutral-300);
+}
+
+.dark-mode .related-food-price {
+  color: var(--primary-400);
+}
+
+@media (max-width: 992px) {
+  .food-detail-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .food-detail-image img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-meta {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .food-ingredients ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .related-foods-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

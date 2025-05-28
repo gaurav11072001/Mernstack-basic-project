@@ -1,0 +1,539 @@
+.food-delivery-page {
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+  margin-bottom: 4rem;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-600);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-700);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.how-it-works-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--neutral-800);
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-600);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 auto 1.5rem;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-800);
+}
+
+.step p {
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+/* Featured Foods Section */
+.featured-foods-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.featured-foods-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-800);
+}
+
+.featured-foods-section > p {
+  color: var(--neutral-600);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.featured-foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featured-food-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-food-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.featured-food-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.featured-food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.featured-food-card:hover .featured-food-image img {
+  transform: scale(1.05);
+}
+
+.veg-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.featured-food-content {
+  padding: 1.5rem;
+}
+
+.featured-food-content h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem;
+  color: var(--neutral-800);
+}
+
+.featured-food-content p {
+  color: var(--neutral-600);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.featured-food-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-food-price {
+  font-weight: 600;
+  color: var(--primary-700);
+  font-size: 1.2rem;
+}
+
+.featured-food-time {
+  color: var(--neutral-600);
+  font-size: 0.9rem;
+}
+
+/* Food Categories Section */
+.food-categories-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  background-color: #f9fafb;
+  border-radius: 24px;
+}
+
+.food-categories-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-800);
+}
+
+.food-categories-section > p {
+  color: var(--neutral-600);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.category-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.category-card:hover .category-image img {
+  transform: scale(1.05);
+}
+
+.category-content {
+  padding: 1.5rem;
+}
+
+.category-content h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.3rem;
+  color: var(--neutral-800);
+}
+
+.category-content p {
+  color: var(--neutral-600);
+  line-height: 1.5;
+}
+
+/* Food Menu Section */
+.food-menu-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.food-menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--neutral-800);
+}
+
+.food-menu-section > p {
+  color: var(--neutral-600);
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--neutral-800);
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.testimonial-content {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+  font-style: italic;
+  color: var(--neutral-700);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-author h4 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+  color: var(--neutral-800);
+}
+
+.testimonial-author p {
+  margin: 0;
+  color: var(--neutral-600);
+  font-size: 0.9rem;
+}
+
+/* Download App Section */
+.download-app-section {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.download-content {
+  flex: 1;
+  max-width: 500px;
+  padding: 0 2rem;
+}
+
+.download-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--neutral-800);
+}
+
+.download-content p {
+  color: var(--neutral-600);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-button img {
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.app-button:hover img {
+  transform: translateY(-3px);
+}
+
+.app-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.app-image img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Dark Mode Styles */
+.dark-mode .hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+}
+
+.dark-mode .how-it-works-section h2,
+.dark-mode .featured-foods-section h2,
+.dark-mode .food-categories-section h2,
+.dark-mode .food-menu-section h2,
+.dark-mode .testimonials-section h2,
+.dark-mode .download-content h2 {
+  color: var(--neutral-200);
+}
+
+.dark-mode .how-it-works-section > p,
+.dark-mode .featured-foods-section > p,
+.dark-mode .food-categories-section > p,
+.dark-mode .food-menu-section > p,
+.dark-mode .download-content p {
+  color: var(--neutral-400);
+}
+
+.dark-mode .step {
+  background-color: var(--neutral-800);
+}
+
+.dark-mode .step h3 {
+  color: var(--neutral-200);
+}
+
+.dark-mode .step p {
+  color: var(--neutral-400);
+}
+
+.dark-mode .featured-food-card,
+.dark-mode .category-card,
+.dark-mode .testimonial {
+  background-color: var(--neutral-800);
+}
+
+.dark-mode .featured-food-content h3,
+.dark-mode .category-content h3,
+.dark-mode .testimonial-author h4 {
+  color: var(--neutral-200);
+}
+
+.dark-mode .featured-food-content p,
+.dark-mode .category-content p,
+.dark-mode .testimonial-content p {
+  color: var(--neutral-400);
+}
+
+.dark-mode .featured-food-price {
+  color: var(--primary-400);
+}
+
+.dark-mode .featured-food-time,
+.dark-mode .testimonial-author p {
+  color: var(--neutral-500);
+}
+
+.dark-mode .food-categories-section,
+.dark-mode .download-app-section {
+  background-color: var(--neutral-900);
+}
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .download-app-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .download-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .app-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .how-it-works-section h2,
+  .featured-foods-section h2,
+  .food-categories-section h2,
+  .food-menu-section h2,
+  .testimonials-section h2,
+  .download-content h2 {
+    font-size: 2rem;
+  }
+}

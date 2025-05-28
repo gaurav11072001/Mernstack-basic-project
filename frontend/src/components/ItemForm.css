@@ -1,0 +1,152 @@
+/* ItemForm.css */
+.item-form {
+  position: relative;
+}
+
+.form-floating {
+  margin-bottom: 1.5rem;
+}
+
+.form-floating label {
+  color: var(--neutral-600);
+}
+
+.dark-mode .form-floating label {
+  color: var(--neutral-400);
+}
+
+.form-control:focus + label {
+  color: var(--primary-600);
+}
+
+.dark-mode .form-control:focus + label {
+  color: var(--primary-400);
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid var(--neutral-300);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 0.25rem rgba(33, 150, 243, 0.25);
+}
+
+.dark-mode .form-control {
+  background-color: var(--neutral-800);
+  border-color: var(--neutral-700);
+  color: var(--neutral-200);
+}
+
+.dark-mode .form-control:focus {
+  background-color: var(--neutral-800);
+  color: white;
+}
+
+.form-text {
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.dark-mode .form-text {
+  color: var(--neutral-400);
+}
+
+.invalid-feedback {
+  color: var(--error-500);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.btn-submit {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover, .btn-submit:focus {
+  background-color: var(--primary-700);
+  border-color: var(--primary-700);
+  box-shadow: 0 0 0 0.25rem rgba(33, 150, 243, 0.25);
+}
+
+.btn-submit:disabled {
+  background-color: var(--neutral-400);
+  border-color: var(--neutral-400);
+  cursor: not-allowed;
+}
+
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.character-count {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+}
+
+.character-count.limit-near {
+  color: var(--warning-700);
+}
+
+.character-count.limit-reached {
+  color: var(--error-700);
+}
+
+.form-hint {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-50);
+  color: var(--primary-700);
+  font-size: 0.875rem;
+}
+
+.dark-mode .form-hint {
+  background-color: rgba(33, 150, 243, 0.1);
+  color: var(--primary-300);
+}
+
+.form-hint svg {
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.form-animation-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.form-animation-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.form-animation-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-animation-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
