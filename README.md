@@ -1,4 +1,8 @@
 # MERN Stack Basic Project
+![image](https://github.com/user-attachments/assets/12ad1a4d-8556-40c5-8336-481d236857af)
+![image](https://github.com/user-attachments/assets/f34c18b9-a61a-4bd6-8cb0-ac145b22443a)
+
+
 
 This is a basic starter project for a MERN (MongoDB, Express.js, React.js, Node.js) stack application.
 
